@@ -9,7 +9,7 @@ const Home = () => {
 
 	return (
 		<div>
-			<h1>Bienvenido a Rick y Morti API render</h1>
+			<h1>Bienvenido a Rick y Morti</h1>
 			{console.log("Rederizo HOME")}
 			{chars.map((char) => (
 				// Le paso el objeto char a Card
