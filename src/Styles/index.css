@@ -1,0 +1,380 @@
+body {
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+		"Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+		"Helvetica Neue", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.App {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	min-height: 100vh;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
+}
+
+main {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 2rem;
+}
+
+.favButton {
+	background-color: darkcyan;
+	padding: 10px 50px 10px 50px;
+	font-size: 25px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.2s ease;
+	margin-bottom: 1rem;
+	margin-top: 0.5rem;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	-webkit-transition: background-color 0.3s ease, transform 0.2s ease;
+	-moz-transition: background-color 0.3s ease, transform 0.2s ease;
+	-ms-transition: background-color 0.3s ease, transform 0.2s ease;
+	-o-transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.favButton:hover {
+	background-color: rgb(206, 217, 142);
+	transform: scale(1.05);
+	-webkit-transform: scale(1.05);
+	-moz-transform: scale(1.05);
+	-ms-transform: scale(1.05);
+	-o-transform: scale(1.05);
+}
+
+.dark .favButton {
+	background-color: rgba(255, 255, 255, 0.2);
+	color: white;
+}
+
+.dark .favButton:hover {
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+.favButton.delete {
+	background-color: red;
+	color: red;
+}
+
+.favButton.delete:hover {
+	background-color: rgba(255, 0, 0, 0.3);
+}
+
+.handleThemeButton {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	background-color: rgba(136, 136, 136, 0.116);
+	padding: 10px;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+	transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.handleThemeButton:hover {
+	background-color: rgb(143, 145, 130);
+}
+
+h1 {
+	text-align: center;
+	margin: 1.5rem 0;
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.2rem;
+	height: 60px;
+	background-color: rgba(240, 240, 240, 0.9);
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links {
+	display: flex;
+	gap: 1rem;
+	margin-left: auto;
+	margin-right: 10px;
+}
+.nav-links a {
+	color: #000;
+	text-decoration: none;
+	font-size: 1rem;
+	font-weight: 500;
+	cursor: pointer;
+	transition: color 0.3s ease;
+	text-align: right;
+}
+
+.nav-links a:hover {
+	color: rgb(136, 136, 136);
+}
+
+.nav-logo {
+	display: flex;
+	align-items: center;
+	height: 100%;
+}
+
+.logo {
+	width: auto;
+	max-height: 100%;
+	object-fit: contain;
+}
+
+.navbar.dark {
+	background-color: black;
+	color: white;
+}
+
+@media (max-width: 768px) {
+	nav {
+		flex-direction: column;
+		height: auto;
+	}
+
+	.nav-links {
+		margin-top: 1rem;
+		gap: 1rem;
+		display: flex;
+		align-items: center;
+	}
+
+	.handleThemeButton {
+		margin-top: 1rem;
+	}
+}
+
+.contact-page {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 5rem;
+	flex-grow: 1;
+	text-align: center;
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	padding: 1rem;
+	width: 100%;
+	height: 40px;
+	margin-top: auto;
+	background-color: rgba(240, 240, 240, 0.9);
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer > img {
+	width: 200px;
+	margin: 0;
+}
+footer > p {
+	margin: 0;
+	padding-top: 0.7rem;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 300px;
+	height: 100px;
+	margin: 0 auto;
+}
+
+form button {
+	background-color: rgba(136, 136, 136, 0.116);
+	padding: 10px;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+	transition: background-color 0.3s ease;
+}
+
+form button:hover {
+	background-color: rgb(206, 217, 142);
+}
+
+.error-message {
+	color: red;
+	font-size: 0.9rem;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 2rem;
+	padding: 0.5rem;
+	border-radius: 4px;
+	width: 100%;
+}
+
+.error-message {
+	background-color: rgba(255, 0, 0, 0.1);
+	color: red;
+	border: 1px solid red;
+}
+
+.success-message {
+	color: green;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 1rem;
+	padding: 0.5rem;
+}
+
+.contact-form.dark {
+	background-color: #4d4a4a;
+	color: white;
+}
+
+.contact-form.dark input {
+	background-color: #333;
+	color: white;
+	border: 1px solid #555;
+}
+
+.contact-form.dark input:focus {
+	border-color: white;
+	box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.contact-form.dark button {
+	background-color: rgba(255, 255, 255, 0.1);
+	color: white;
+}
+
+.contact-form.dark button:hover {
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	width: 40vw;
+	margin: 3rem;
+	padding: 1rem;
+
+	background-color: lightcyan;
+	box-shadow: 0 7px 64px 0 rgba(0, 0, 0, 0.3);
+	border: solid 2px rgb(136, 136, 136);
+	-o-border-radius: 16px;
+	-webkit-border-radius: 16px;
+	-moz-border-radius: 16px;
+	-ms-border-radius: 16px;
+	border-radius: 16px;
+
+	img {
+		width: 100%;
+		height: auto;
+		margin-bottom: 1rem;
+		object-fit: cover;
+
+		-webkit-border-radius: 16px;
+		-moz-border-radius: 16px;
+		-ms-border-radius: 16px;
+		-o-border-radius: 16px;
+		border-radius: 16px;
+	}
+}
+
+/*
+.card-image {
+	width: 100%;
+	height: auto;
+	margin-bottom: 1rem;
+	object-fit: cover;
+
+	-webkit-border-radius: 16px;
+	-moz-border-radius: 16px;
+	-ms-border-radius: 16px;
+	-o-border-radius: 16px;
+	border-radius: 16px;
+}
+*/
+.card:hover {
+	border-color: rgb(206, 217, 142);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	transform: scale(1.05);
+}
+
+.card-grid {
+	display: flex;
+	justify-content: center;
+	gap: 1.5rem;
+	width: 90vw;
+	height: auto;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	padding: 2rem 0;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+	display: table;
+	border: 1px solid #ccc;
+}
+
+td,
+th {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+}
+
+tr:nth-child(even) {
+	background-color: #f9f9f9;
+}
+
+.dark {
+	background-color: #3e3c3c;
+	color: white;
+}
+.dark a {
+	color: white;
+}
+
+.dark a:hover {
+	color: #ddd;
+}
+
+.dentist-detail {
+	text-align: center;
+}
+.detail-link {
+	display: block;
+	text-decoration: none;
+	color: #007bff;
+	font-weight: bold;
+	margin-top: 1rem;
+	display: inline-block;
+	transition: color 0.3s ease;
+}
