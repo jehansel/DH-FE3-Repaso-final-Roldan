@@ -12,7 +12,6 @@ const Favs = () => {
 			{favs.map((char) => (
 				<Card key={char.id} char={char} />
 			))}
-			f
 		</div>
 	);
 };
