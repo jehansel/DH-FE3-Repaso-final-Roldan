@@ -1,7 +1,13 @@
-import { createRoot } from "react-dom/client";
-import App from "./App.jsx";
+// IMPORTs
+// Styles
 import "./Styles/index.css";
+
+// React
+import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
+
+// Components
+import App from "./App.jsx";
 import Context from "./Context/Context.jsx";
 
 createRoot(document.getElementById("root")).render(
